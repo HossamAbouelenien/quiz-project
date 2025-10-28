@@ -1,0 +1,96 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background-color: #F9FFFB;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    display:flex;
+    justify-content: space-between;
+    max-height: 100vh;
+}
+.container .image{
+    flex-basis: 40%;
+    max-height: 100vh;
+}
+.container .image img{
+    max-width: 100%;
+}
+
+
+.container .sign-up{
+    flex-basis: 40%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:40px;
+}
+
+
+.container .sign-up h2{
+    font-size: 40px;
+    text-transform:capitalize;
+    margin : 0;
+}
+
+
+.container .sign-up form{
+    display: flex;
+    flex-flow: column wrap;
+    font-size: 15px;
+    gap:20px;
+
+}
+.container .sign-up form div{
+    max-width: 50%;
+}
+
+.container .sign-up form label{
+    color:#333;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-bottom: 5px;
+    
+}
+.container .sign-up form input{
+    border: 1px solid #777;
+    padding: 6px;
+    border-radius: 4px;
+    max-width:100%;
+
+}
+.container .sign-up form input:focus{
+    outline: none;
+    
+}
+
+
+.container .sign-up form input[name = "firstname"]{
+
+}
+
+.container .sign-up form input[name = "lastname"]{
+
+}
+
+.container .sign-up form input[name = "email"]{
+
+}
+
+.container .sign-up form input[name = "password"]{
+
+}
+
+.container .sign-up form input[name = "re-password"]{
+
+}
+.container .sign-up form input[type = "submit"]{
+   display: inline-block;
+   width:67%;
+   background-color: rgb(47, 202, 47);
+   color:white;
+}
+
