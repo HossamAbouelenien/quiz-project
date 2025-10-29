@@ -2,38 +2,49 @@ body{
     margin:0;
     padding:0;
     box-sizing: border-box;
-    background-color: #F9FFFB;
-    font-family: Arial, Helvetica, sans-serif;
 }
+
+.out-container{
+    margin:20px 80px;
+    background-color: #C0E2C9;
+    border-radius: 20px;
+}
+
 
 .container{
     display:flex;
-    justify-content: space-between;
-    max-height: 100vh;
+    background-color: #C0E2C9;
+    border-radius: 10px;
+    padding:30px 50px;
 }
 .container .image{
-    flex-basis: 40%;
+    flex-basis: 60%;
     max-height: 100vh;
+    border-radius: 10px;
+    
 }
 .container .image img{
-    max-width: 100%;
+    height:100%;
+    width:100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px
+
 }
 
 
 .container .sign-up{
     flex-basis: 40%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap:40px;
+    background-color: white;
 }
 
 
 .container .sign-up h2{
-    font-size: 40px;
+    font-size: 30px;
     text-transform:capitalize;
-    margin : 0;
+    margin : 25px;
+    text-align: center;
 }
 
 
@@ -42,14 +53,15 @@ body{
     flex-flow: column wrap;
     font-size: 15px;
     gap:20px;
-
+    background-color: white;
+    margin:10px auto;
 }
 .container .sign-up form div{
-    max-width: 50%;
+    width: 100%;
 }
 
 .container .sign-up form label{
-    color:#333;
+    color:#777;
     text-transform: capitalize;
     display: inline-block;
     margin-bottom: 5px;
@@ -57,9 +69,9 @@ body{
 }
 .container .sign-up form input{
     border: 1px solid #777;
-    padding: 6px;
+    padding: 8px 16px;
     border-radius: 4px;
-    max-width:100%;
+    width:100%;
 
 }
 .container .sign-up form input:focus{
@@ -67,30 +79,30 @@ body{
     
 }
 
-
-.container .sign-up form input[name = "firstname"]{
-
-}
-
-.container .sign-up form input[name = "lastname"]{
-
-}
-
-.container .sign-up form input[name = "email"]{
-
-}
-
-.container .sign-up form input[name = "password"]{
-
-}
-
-.container .sign-up form input[name = "re-password"]{
-
-}
 .container .sign-up form input[type = "submit"]{
-   display: inline-block;
-   width:67%;
-   background-color: rgb(47, 202, 47);
-   color:white;
+    padding: 10px 20px;
+    background-color: #253239;
+    color: aliceblue;
+    width : 60%;
+    margin-left:50px;
 }
 
+.container .sign-up form input[type = "submit"]:hover{
+    cursor: pointer;
+}
+
+.foot-log-in{
+    width: 100%;
+    margin-left: 100px;
+}
+.foot-log-in p{
+    display: inline-block;
+    text-transform: capitalize;
+    color: #777;
+}
+.foot-log-in a{
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #53ab6c;
+}
