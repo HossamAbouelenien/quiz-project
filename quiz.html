@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="quiz-style.css">
-</head>
-<body>
-    
-
+    <link rel="stylesheet" href="quiz-style.css" />
+  </head>
+  <body>
+    <div class="exam-container">
+      <aside class="sidebar">
+        <h3>Marked Questions</h3>
+        <div id="markedList" class="marked-list"></div>
+      </aside>
+      <main class="main-content">
+        <div class="hero">
+          <h1>Exam Mastery Hub</h1>
+          <p>
+            Unleash Your Academic Success with Exam Mastery Hub's Exam
+            Excellence Platform
+          </p>
+        </div>
+        <div class="question-box">
+          <h2 id="questionNumber">Question 1</h2>
+          <div id="questionText" class="question">How are you doing?</div>
+          <form id="examForm">
+            <div id="optionsContainer" class="options"></div>
+            <div class="controls">
+              <button type="button" class="btn" onclick="prevQ()">
+                Previous
+              </button>
+              <button type="button" class="btn" onclick="nextQ()">Next</button>
+              <button type="button" class="btn mark-btn" onclick="markQ()">
+                Mark
+              </button>
+              <button type="submit" class="btn submit-btn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </main>
+      <div id="timer" class="timer">Time Left: 05:00</div>
+    </div>
     <script src="quiz-logic.js"></script>
-</body>
+  </body>
 </html>
