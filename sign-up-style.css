@@ -51,6 +51,7 @@ body {
   font-size: 15px;
   background-color: white;
   margin: 0px auto;
+  width: 70%;
 }
 .container .sign-up form div {
   width: 100%;
