@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+    <link rel="stylesheet" href="all.min.css">
     <link rel="stylesheet" href="sign-up-style.css">
 </head>
 <body>
@@ -15,31 +16,41 @@
             </div>
             <div class="sign-up">
                 <h2>sign up</h2>
-                <form action="">
-                    <div>
+                <form action="" id = "form">
+                    <div class="d-form ">
                         <label for="firstname">firstname</label>
-                        <br>
                         <input type="text" name="firstname" id="firstname">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <span>error message</span>
                     </div>
-                    <div>
+                    <div class="d-form ">
                         <label for="lastname">lastname</label>
-                        <br>
                         <input type="text" name="lastname" id="lastname">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <span>error message</span>
                     </div>
-                    <div>
+                    <div class="d-form">
                         <label for="email">email</label>
-                        <br>
                         <input type="email" name="email" id="email">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <span>error message</span>
                     </div>
-                    <div>
+                    <div class="d-form">
                         <label for="password">password</label>
-                        <br>
                         <input type="password" name="password" id="password">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <span>error message</span>
                     </div>
-                    <div>
+                    <div class="d-form">
                         <label for="re-password">re-enter password</label>
-                        <br>
                         <input type="password" name="re-password" id="re-password">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <span>error message</span>
                     </div>
                     <div>
                         <input type="submit" value="Sign-Up">

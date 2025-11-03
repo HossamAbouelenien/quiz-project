@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log In</title>
-    <link rel="stylesheet" href="log-in-style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="log-in-style.css" />
+  </head>
+  <body>
     <div class="section1">
-       <div class="container">
-         <div class="mainImage">
-            <img src="images-login/task photo.PNG" alt="">
+      <div class="container">
+        <div class="mainImage">
+          <img src="images-login/task photo.PNG" alt="" />
         </div>
 
-         <div class="form-sec">
-        <h1>Login </h1>
+        <div class="form-sec">
+          <h1>Login</h1>
 
-    <form action="">
-      <div class="inp-1">
-              <label for="signinemail">user name or email</label>
-
- 
-     <input id="signinemail" class="input-name" placeholder="user name or email" type="text">
+          <form action="" id="form">
+            <div class="inp-1">
+              <label for="email">email</label>
+              <input
+                id="email"
+                class="input-name"
+                placeholder="email"
+                type="text"
+              />
+            </div>
+            <div>
+              <label for="password" class="input-mail">password</label>
+              <input id="password" placeholder="password" type="password" />
+            </div>
+            <span class="msg" id="errorMSG"
+              >incorrect email or password, try again</span
+            >
+            <button class="btn-login">Login</button>
+          </form>
+          <h4>
+            Don't Have an account ?
+            <a href="sign-up.html" class="foot-sign-up">Sign UP</a>
+          </h4>
+        </div>
       </div>
-     
-     <div>   <label for="signinemail" class="input-mail">password</label>
-
-
-
-        <input id="signinemail" placeholder="password" type="password"></div>
-        <button class="btn-login">Login</button>
-
-        
-    </form>
-    <h4>Don't Have an account ? <a href="sign-up.html" class="foot-sign-up">Sign UP</a></h4>
-
     </div>
-       </div>
-
-       
-    </div>
-
-
-   
 
     <script src="log-in-logic.js"></script>
-</body>
+  </body>
 </html>

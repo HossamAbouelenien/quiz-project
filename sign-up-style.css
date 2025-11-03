@@ -1,108 +1,136 @@
-body{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-.out-container{
-    margin:20px 80px;
-    background-color: #C0E2C9;
-    border-radius: 20px;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-
-.container{
-    display:flex;
-    background-color: #C0E2C9;
-    border-radius: 10px;
-    padding:30px 50px;
-}
-.container .image{
-    flex-basis: 60%;
-    max-height: 100vh;
-    border-radius: 10px;
-    
-}
-.container .image img{
-    height:100%;
-    width:100%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px
-
+.out-container {
+  margin: 20px 80px;
+  background-color: #c0e2c9;
+  border-radius: 20px;
 }
 
-
-.container .sign-up{
-    flex-basis: 40%;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
+.container {
+  display: flex;
+  background-color: #c0e2c9;
+  border-radius: 10px;
+  padding: 30px 50px;
+}
+.container .image {
+  flex-basis: 60%;
+  max-height: 100vh;
+  border-radius: 10px;
+}
+.container .image img {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
-
-.container .sign-up h2{
-    font-size: 30px;
-    text-transform:capitalize;
-    margin : 25px;
-    text-align: center;
+.container .sign-up {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
 }
 
-
-.container .sign-up form{
-    display: flex;
-    flex-flow: column wrap;
-    font-size: 15px;
-    gap:20px;
-    background-color: white;
-    margin:10px auto;
-}
-.container .sign-up form div{
-    width: 100%;
+.container .sign-up h2 {
+  font-size: 30px;
+  text-transform: capitalize;
+  margin: 25px;
+  text-align: center;
 }
 
-.container .sign-up form label{
-    color:#777;
-    text-transform: capitalize;
-    display: inline-block;
-    margin-bottom: 5px;
-    
+.container .sign-up form {
+  display: flex;
+  flex-flow: column wrap;
+  font-size: 15px;
+  background-color: white;
+  margin: 0px auto;
 }
-.container .sign-up form input{
-    border: 1px solid #777;
-    padding: 8px 16px;
-    border-radius: 4px;
-    width:100%;
-
-}
-.container .sign-up form input:focus{
-    outline: none;
-    
+.container .sign-up form div {
+  width: 100%;
+  margin-bottom: 5px;
+  /* padding-bottom: 20px; */
+  position: relative;
 }
 
-.container .sign-up form input[type = "submit"]{
-    padding: 10px 20px;
-    background-color: #253239;
-    color: aliceblue;
-    width : 60%;
-    margin-left:50px;
+.container .sign-up form div i {
+  position: absolute;
+  top: 32px;
+  right: 10px;
+  visibility: hidden;
+}
+.container .sign-up form div.error .fa-circle-exclamation {
+  visibility: visible;
+  color: red;
+}
+.container .sign-up form div.success .fa-circle-check {
+  visibility: visible;
+  color: green;
+}
+.container .sign-up form div span {
+  visibility: hidden;
+  color: red;
+  display: inline-block;
+  margin: 2px 0;
+  font-size: 12px;
+  text-transform: capitalize;
 }
 
-.container .sign-up form input[type = "submit"]:hover{
-    cursor: pointer;
+.container .sign-up form label {
+  color: #777;
+  text-transform: capitalize;
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.container .sign-up form input {
+  border: 1px solid #777;
+  padding: 8px 16px;
+  border-radius: 4px;
+  width: 100%;
+  display: block;
+  margin: 0;
 }
 
-.foot-log-in{
-    width: 100%;
-    margin-left: 100px;
+.container .sign-up form .success input {
+  border: 1px solid green;
 }
-.foot-log-in p{
-    display: inline-block;
-    text-transform: capitalize;
-    color: #777;
+.container .sign-up form .d-form.error input {
+  border: 1px solid red;
 }
-.foot-log-in a{
-    font-weight: bold;
-    font-size: 20px;
-    text-transform: capitalize;
-    color: #53ab6c;
+.container .sign-up form input:focus {
+  outline: none;
+}
+
+.container .sign-up form input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #253239;
+  color: aliceblue;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.container .sign-up form input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.foot-log-in {
+  margin: 0 auto;
+}
+.foot-log-in p {
+  display: inline-block;
+  text-transform: capitalize;
+  color: #777;
+}
+.foot-log-in a {
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #53ab6c;
 }
