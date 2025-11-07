@@ -60,6 +60,7 @@ form {
   background-color: #253239;
   color: aliceblue;
   margin-top: 40px;
+  border-radius: 5px;
 }
 .btn-login:hover {
   cursor: pointer;
