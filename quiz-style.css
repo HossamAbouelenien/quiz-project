@@ -66,6 +66,7 @@ body {
 
 .hero p {
   color: #3c6d50;
+  /* color: #e74457; */
 }
 
 .question-box {
@@ -196,4 +197,111 @@ body {
 
 .score-page button:hover {
   background: #1f4c3b;
+}
+
+
+
+
+
+.score-page.failed p.message {
+  color: #fe7575;
+  font-weight: bold;
+  background-color: #ffcccc;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+
+.score-dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #eafbea;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card {
+  background: #f9fff9;
+  padding: 60px 140px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h1 {
+  margin-bottom: 30px;
+  color: #225c3b;
+}
+
+.result-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+}
+
+.circle {
+  width: 140px;
+  height: 140px;
+  border: 10px solid #4CAF50;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 28px;
+  transition: all 0.4s ease-in-out;
+}
+
+.circle .percent {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.circle .label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px;
+  color: #333;
+}
+
+
+.message {
+  text-align: left;
+}
+
+.message h2 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.message p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+.failed .circle {
+  border-color: #f44336;
+}
+
+.failed .message h2 {
+  color: #d32f2f;
 }

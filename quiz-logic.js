@@ -11,9 +11,20 @@ const questions = [
   { text: 'Frontend means?', options: ['Server side', 'Client side', 'Database', 'Hardware'], correct: 'Client side' }
 ];
 
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+shuffleArray(questions); 
+
 let currentIndex = 0;
 const marked = new Set();
 const answers = {}; 
+
 function loadQuestion(index) {
   const q = questions[index];
   document.getElementById('questionNumber').textContent = `Question ${index + 1}`;
@@ -30,12 +41,10 @@ function loadQuestion(index) {
       <label for="${inputId}">${opt}</label>
     `;
 
-    
     if (answers[index] === opt) {
       div.querySelector('input').checked = true;
     }
 
-   
     div.querySelector('input').addEventListener('change', (e) => {
       answers[index] = e.target.value;
     });
@@ -78,27 +87,52 @@ function updateMarkedSidebar() {
   });
 }
 
-
 function showScore() {
   let score = 0;
   questions.forEach((q, i) => {
     if (answers[i] === q.correct) score++;
   });
 
+  const passMark = 5;
+  const percentage = Math.round((score / questions.length) * 100);
+
  
+  let color;
+  if (percentage >= 70) color = "#2e7d32"; 
+  else if (percentage >= 50) color = "#ff9800"; 
+  else color = "#f44336"; 
+
+  const isPassed = score >= passMark;
+
   document.body.innerHTML = `
-    <div class="score-page">
-      <h1> Exam Completed!</h1>
-      <h2>Your Score: ${score} / ${questions.length}</h2>
-      <p>${score >= questions.length / 2 ? "Well done! " : "Keep practicing! "}</p>
-      <button onclick="location.reload()">Retake Exam</button>
+    <div class="score-dashboard">
+      <div class="card">
+        <h1>Exam Result</h1>
+        <div class="result-content">
+          <div class="circle" style="border-color: ${color}; color: ${color}">
+            <div class="percent">${percentage}%</div>
+            <div class="label">Your Score</div>
+          </div>
+          <div class="message">
+            <h2 style="color:${color}">
+              ${isPassed ? " Congratulations!" : "❌ Try Again!"}
+            </h2>
+            <p>${isPassed ? "You passed the exam!" : "You failed the exam. Better luck next time!"}</p>
+            <button onclick="location.reload()" class="btn">Retake Exam</button>
+          </div>
+        </div>
+      </div>
     </div>
   `;
 }
 
 
+
 let timeLeft = 5 * 60;
 const timerDisplay = document.getElementById("timer");
+
+
+
 
 function updateTimer() {
   let minutes = Math.floor(timeLeft / 60);
@@ -111,14 +145,47 @@ function updateTimer() {
 
   if (timeLeft <= 0) {
     clearInterval(timerInterval);
-    showScore(); 
+    showTimeOutMessage(); 
   }
 
   timeLeft--;
 }
+function showTimeOutMessage() {
+  let score = 0;
+  questions.forEach((q, i) => {
+    if (answers[i] === q.correct) score++;
+  });
+
+  const percentage = Math.round((score / questions.length) * 100);
+
+  let color;
+  if (percentage >= 70) color = "#2e7d32"; 
+  else if (percentage >= 50) color = "#ff9800"; 
+  else color = "#f44336"; 
+
+  document.body.innerHTML = `
+    <div class="score-dashboard">
+      <div class="card">
+        <h1 style="color:#f44336;"> Time Out!</h1>
+        <p style="margin-bottom:20px;">Your exam time has ended automatically.</p>
+        <div class="result-content">
+          <div class="circle" style="border-color:${color}; color:${color}">
+            <div class="percent">${percentage}%</div>
+            <div class="label">Your Score</div>
+          </div>
+          <div class="message">
+            <h2 style="color:${color}">Exam Finished</h2>
+            <p>You answered before time ran out. Check your result below.</p>
+            <button onclick="location.reload()" class="btn">Retake Exam</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 
 const timerInterval = setInterval(updateTimer, 1000);
-
 
 document.getElementById('examForm').addEventListener('submit', (e) => {
   e.preventDefault();
